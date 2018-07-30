@@ -9,16 +9,13 @@ using System;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.V4.App;
 using Android.Views;
 using MvvmCross.Droid.Views;
 using MvvmCross.Platform.Core;
 
-namespace MvvmCross.Droid.Support.V4.EventSource
-{
+namespace MvvmCross.Droid.Support.V4.EventSource {
     public class MvxEventSourceFragment
-        : Fragment, IMvxEventSourceFragment
-    {
+        : Android.Support.V4.App.Fragment, IMvxEventSourceFragment {
         public event EventHandler<MvxValueEventArgs<Context>> AttachCalled;
 
         public event EventHandler<MvxValueEventArgs<Bundle>> CreateWillBeCalled;
@@ -45,87 +42,72 @@ namespace MvvmCross.Droid.Support.V4.EventSource
 
         public event EventHandler<MvxValueEventArgs<Bundle>> SaveInstanceStateCalled;
 
-        public MvxEventSourceFragment()
-        {
+        public MvxEventSourceFragment() {
         }
 
         public MvxEventSourceFragment(IntPtr javaReference, JniHandleOwnership transfer)
-            : base(javaReference, transfer)
-        {
+            : base(javaReference, transfer) {
         }
 
-		public override void OnAttach(Context context)
-        {
+        public override void OnAttach(Context context) {
             AttachCalled.Raise(this, context);
             base.OnAttach(context);
         }
 
-        public override void OnCreate(Bundle savedInstanceState)
-        {
+        public override void OnCreate(Bundle savedInstanceState) {
             CreateWillBeCalled.Raise(this, savedInstanceState);
             base.OnCreate(savedInstanceState);
             CreateCalled.Raise(this, savedInstanceState);
         }
 
-        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-        {
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             CreateViewCalled.Raise(this, new MvxCreateViewParameters(inflater, container, savedInstanceState));
             return base.OnCreateView(inflater, container, savedInstanceState);
         }
 
-        public override void OnStart()
-        {
+        public override void OnStart() {
             StartCalled.Raise(this);
             base.OnStart();
         }
 
-        public override void OnResume()
-        {
+        public override void OnResume() {
             ResumeCalled.Raise(this);
             base.OnResume();
         }
 
-        public override void OnPause()
-        {
+        public override void OnPause() {
             PauseCalled.Raise(this);
             base.OnPause();
         }
 
-        public override void OnStop()
-        {
+        public override void OnStop() {
             StopCalled.Raise(this);
             base.OnStop();
         }
 
-        public override void OnDestroyView()
-        {
+        public override void OnDestroyView() {
             DestroyViewCalled.Raise(this);
             base.OnDestroyView();
         }
 
-        public override void OnDestroy()
-        {
+        public override void OnDestroy() {
             DestroyCalled.Raise(this);
             base.OnDestroy();
         }
 
-        public override void OnDetach()
-        {
+        public override void OnDetach() {
             DetachCalled.Raise(this);
             base.OnDetach();
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing) {
                 DisposeCalled.Raise(this);
             }
             base.Dispose(disposing);
         }
 
-        public override void OnSaveInstanceState(Bundle outState)
-        {
+        public override void OnSaveInstanceState(Bundle outState) {
             SaveInstanceStateCalled.Raise(this, outState);
             base.OnSaveInstanceState(outState);
         }
