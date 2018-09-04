@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
     <Optimize>True</Optimize>
     <OutputPath>..\..\..\bin\Release\Mvx\Portable\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
@@ -40,6 +39,20 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Adhoc|iPhone' ">
     <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>..\..\..\bin\Release\Mvx\Portable\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Shipping|AnyCPU' ">
+    <Optimize>True</Optimize>
+    <OutputPath>..\..\..\bin\Release\Mvx\Portable\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Shipping|iPhone' ">
     <Optimize>True</Optimize>
     <OutputPath>..\..\..\bin\Release\Mvx\Portable\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
