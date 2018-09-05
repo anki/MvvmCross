@@ -64,7 +64,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
-    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;MONOTOUCH</DefineConstants>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;MONOTOUCH;SHIPPING;</DefineConstants>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Shipping|iPhone' ">
@@ -75,7 +75,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
-    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;MONOTOUCH</DefineConstants>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;MONOTOUCH;SHIPPING;</DefineConstants>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
