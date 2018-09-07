@@ -53,6 +53,18 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Shipping|AnyCPU' ">
+    <DebugType></DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>..\..\..\bin\Release\Mvx\Droid\</OutputPath>
+    <DefineConstants>TRACE;SHIPPING</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <AndroidTlsProvider></AndroidTlsProvider>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Java.Interop" />
     <Reference Include="Mono.Android" />
