@@ -23,17 +23,6 @@
     <MtouchProfiling>True</MtouchProfiling>
     <MtouchLink>None</MtouchLink>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <NoStdLib>True</NoStdLib>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>False</Optimize>
-    <OutputPath>..\..\..\bin\Release\Mvx\iOS\</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>False</ConsolePause>
-    <DefineConstants>MONOTOUCH</DefineConstants>
-    <DebugSymbols>true</DebugSymbols>
-  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Adhoc|AnyCPU' ">
     <NoStdLib>True</NoStdLib>
     <DebugType>pdbonly</DebugType>
