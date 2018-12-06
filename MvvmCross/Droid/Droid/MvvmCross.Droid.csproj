@@ -13,7 +13,6 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <MandroidI18n />
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <AndroidStoreUncompressedFileExtensions />
     <AndroidTlsProvider>
     </AndroidTlsProvider>
